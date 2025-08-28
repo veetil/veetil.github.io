@@ -28,7 +28,7 @@ The ML/AI research landscape faces critical challenges that hinder progress:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="projects/interactive_reseach_ideation_v2.0/ai-researcher-project.png" title="Research Ideation Interface" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ai-researcher-project.png" title="Research Ideation Interface" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
