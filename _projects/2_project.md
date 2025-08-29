@@ -4,7 +4,7 @@ title: Agent Symphony
 description: Multi-Agent Orchestration for AI-Powered Development - Accelerate development by 60-80% through intelligent parallel AI agent coordination
 img: assets/img/agent-symphony-architecture.png
 importance: 3
-category: ai-systems
+category: work
 ---
 
 <div class="row">
