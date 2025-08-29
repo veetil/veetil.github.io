@@ -153,7 +153,7 @@ Interactive Research Ideation v2.0 represents a paradigm shift in how ML/AI rese
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <a href="https://github.com/yourusername/interactive-research-ideation" class="btn btn-primary">View on GitHub</a>
+        <a href="#" class="btn btn-primary">View Project Details</a>
         <a href="#" class="btn btn-secondary">Live Demo</a>
         <a href="#" class="btn btn-info">Documentation</a>
     </div>

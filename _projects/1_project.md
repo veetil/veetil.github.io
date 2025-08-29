@@ -173,7 +173,7 @@ The Elo-Based Academic Paper Ranking System represents a paradigm shift in resea
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <a href="https://github.com/yourusername/top_papers_agentic-2" class="btn btn-primary">View on GitHub</a>
+        <a href="#" class="btn btn-primary">View Project Details</a>
         <a href="#" class="btn btn-info">Documentation</a>
     </div>
 </div>
