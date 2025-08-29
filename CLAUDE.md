@@ -2,10 +2,13 @@
 
 ## Repository Overview
 **Repository:** veetil.github.io  
-**Type:** Personal/Academic Portfolio Website  
+**Type:** Personal/Academic Portfolio Website + AI Project Development Hub  
 **URL:** https://veetil.github.io  
 **Framework:** Jekyll with al-folio theme  
-**Purpose:** Professional portfolio showcasing AI expertise, projects, and accomplishments  
+**Purpose:** 
+- Professional portfolio showcasing AI expertise, projects, and accomplishments
+- Development environment for AI/ML projects with automation tools
+- Integration hub for multiple AI services via MCP (Model Context Protocol)  
 
 ## Owner Information
 **Name:** Vineeth Veetil, PhD  
@@ -24,6 +27,8 @@
 - Medium: vineethveetil
 
 ## Technical Stack
+
+### Portfolio Website
 - **Static Site Generator:** Jekyll 4.3.3
 - **Theme:** al-folio (academic portfolio theme)
 - **Styling:** SCSS/CSS with Bootstrap integration
@@ -34,6 +39,17 @@
   - Ruby gems (via Gemfile)
   - Node packages (Prettier, Liquid Prettier Plugin)
 
+### Development Tools & Integrations
+- **Automation:** claude-parallel.sh - Parallel-first development system
+- **MCP Servers:** 5 configured services via mcp.json
+  - **Puppeteer** - Browser automation and UI testing
+  - **GitHub** - Repository and issue management
+  - **PerplexityAI** - AI-powered research assistance
+  - **Supabase** - Database and backend services
+  - **Firecrawl** - Web scraping and data extraction
+- **AI Integration:** Claude CLI with SDK support
+- **Testing:** Comprehensive TDD with 100% coverage targets
+
 ## Content Structure
 
 ### Pages (`_pages/`)
@@ -42,11 +58,20 @@
 - **dropdown.md** - Dropdown menu page
 - **404.md** - Custom error page
 
-### Projects (`_projects/`)
-- 8 project files (1_project.md through 8_project.md)
+### Projects
+**Portfolio Entries (`_projects/`)**
+- 9 project showcase files (0_project.md through 8_project.md)
+- Featured project: Interactive Research Ideation v2.0 (0_project.md)
 - Features horizontal/vertical layouts
 - Supports categorization and importance ordering
 - Includes preview images in `assets/img/`
+
+**Source Code (`projects/`)**
+Active AI/ML projects with full implementations:
+- **agent_symphony** - Multi-agent orchestration framework with Redis and Claude CLI
+- **interactive_research_ideation_v2.0** - AI-powered research automation platform
+- **openevolve_sw** - Multi-agent system with evolutionary algorithms
+- **top_papers_agentic-2** - Research paper discovery with Elo rating system
 
 ### Blog Posts (`_posts/`)
 - 27 demonstration posts showcasing various features:
@@ -106,11 +131,17 @@ bundle exec jekyll serve
 - `docker-compose.yml` - Container configuration
 - `purgecss.config.js` - CSS optimization
 
-### Recent Additions
-- `mcp.json` - MCP configuration
-- `claude-parallel.sh` - Parallel execution script
-- `.env` - Environment variables (untracked)
-- `tmp/` - Temporary directory (untracked)
+### Development Infrastructure (Untracked)
+- **claude-parallel.sh** - Comprehensive parallel-first development automation system
+  - Orchestrates complete software development cycles
+  - Enforces parallel execution with up to 10 concurrent tasks
+  - Integrates TDD methodology with 100% coverage targets
+  - Includes UI testing framework with Puppeteer MCP
+- **mcp.json** - Model Context Protocol configuration for 5 AI services
+- **.env** - Environment variables for service authentication
+- **projects/** - Active AI/ML project source code repository
+- **tmp/** - Temporary files and development artifacts
+- **todo3.md** - Project migration instructions for portfolio updates
 
 ## Directory Structure
 ```
@@ -123,7 +154,7 @@ veetil.github.io/
 ├── _pages/            # Static pages
 ├── _plugins/          # Ruby Jekyll plugins
 ├── _posts/            # Blog posts
-├── _projects/         # Project showcases
+├── _projects/         # Project showcases (Jekyll entries)
 ├── _sass/             # SCSS stylesheets
 ├── assets/            # Static assets
 │   ├── audio/         # Audio files
@@ -135,8 +166,33 @@ veetil.github.io/
 │   ├── pdf/           # PDF documents
 │   └── video/         # Video files
 ├── bin/               # Utility scripts
-└── lighthouse_results/ # Performance tests
+├── lighthouse_results/ # Performance tests
+├── projects/          # AI/ML project source code
+│   ├── agent_symphony/
+│   ├── interactive_reseach_ideation_v2.0/
+│   ├── openevolve_sw/
+│   └── top_papers_agentic-2/
+├── tmp/               # Temporary development files
+├── claude-parallel.sh # Development automation script
+├── mcp.json          # MCP server configurations
+└── todo3.md          # Project migration tasks
 ```
+
+## Development Workflow
+
+### Project to Portfolio Pipeline
+1. **Development Phase**: Projects are developed in the `projects/` directory
+   - Full source code, documentation, and testing
+   - Uses claude-parallel.sh for automated development
+   - MCP integrations for various AI services
+2. **Analysis Phase**: Project functionality is analyzed and documented
+   - CLAUDE.md created/updated in project folder
+   - explanation.md generated for detailed documentation
+3. **Portfolio Entry**: Projects are converted to Jekyll entries
+   - Markdown file created in `_projects/` with appropriate numbering
+   - Hero image selected and added to `assets/img/`
+   - Project writeup created in project's `writeup/` folder
+4. **Publication**: Jekyll builds and deploys to GitHub Pages
 
 ## Notes for Development
 - The site uses Jekyll's Liquid templating engine
@@ -145,9 +201,13 @@ veetil.github.io/
 - Blog posts demonstrate all available content features
 - Docker setup available for consistent development environment
 - Performance monitoring via Lighthouse
+- Parallel development workflow via claude-parallel.sh
+- MCP servers provide external service integrations
 
 ## Current Status
 - Main branch active with recent commits
-- Untracked files: `.env`, `claude-parallel.sh`, `mcp.json`, `tmp/`
-- Empty README.md file (may need updating)
+- Featured project: Interactive Research Ideation v2.0 (recently added)
+- Untracked files: `.env`, `claude-parallel.sh`, `mcp.json`, `projects/`, `tmp/`, `todo3.md`
+- Active development of AI/ML projects in progress
+- Portfolio updates pending for additional projects (per todo3.md)
 - Full al-folio theme features available for customization
