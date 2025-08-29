@@ -666,13 +666,9 @@ footer.sticky-bottom {
     }
   }
 
-  .grid-gutter-sizer {
-    width: 4%;  // Space between columns
-  }
-
   .grid-sizer,
   .grid-item {
-    width: 48%;  // 2-column layout with space for gutter
+    width: calc(50% - 10px);  // 2-column layout with gutter
     margin-bottom: 2rem;
     
     @media (max-width: 1023px) {

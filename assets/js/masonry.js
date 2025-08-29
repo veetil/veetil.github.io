@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // Init Masonry
   var $grid = $(".grid").masonry({
-    gutter: ".grid-gutter-sizer",
+    gutter: 10,
     horizontalOrder: true,
     itemSelector: ".grid-item",
     percentPosition: true,

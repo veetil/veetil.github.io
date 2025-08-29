@@ -1,4 +1,3 @@
-<div class="grid-sizer"></div>
 <div class="grid-item">
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
     <div class="card hoverable">
@@ -7,7 +6,7 @@
           include figure.liquid
           loading="eager"
           path=project.img
-          sizes = "250px"
+          sizes = "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
           alt="project thumbnail"
         %}
       {% endif %}
