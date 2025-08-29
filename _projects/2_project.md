@@ -1,97 +1,191 @@
 ---
 layout: page
-title: Heavy Equipment Monitoring with AI for Top 5 Construction Firm in Asia Pacific 
-description: Reflective AI technology to measure heavy equipment activity in civil construction projects from video feeds for client.
-img: assets/img/earthwork.jpg
-importance: 4
-category: work
-giscus_comments: false
+title: Agent Symphony
+description: Multi-Agent Orchestration for AI-Powered Development - Accelerate development by 60-80% through intelligent parallel AI agent coordination
+img: assets/img/agent-symphony-architecture.png
+importance: 3
+category: ai-systems
 ---
 
-<h2>Project Overview</h2>
-<p>With the goal of significantly enhancing efficiency in civil construction projects, our team at Reflective AI embarked on a mission to change the way heavy equipment is monitored and managed. Collaborating with one of the largest construction firms in the Asia Pacific region, we leveraged advanced AI-driven video recognition technology to accomplish this. The technology provides real-time, actionable insights into heavy equipment, beginning with dump truck operations, thereby addressing critical operational bottlenecks and enhancing overall project efficiency.
-</p>
-
-<h2>Problem</h2>
-<p>
-The initial digitization focus was on earthwork operations, with plans to expand to other areas, including building construction and manual operations. Earthwork is a substantial cost factor in large infrastructure projects, involving numerous trucks transporting materials, excavators performing cut and fill operations and more. Understanding and digitizing these operations was essential but challenging with traditional technologies including IoT sensors, due to the high turnover of independent equipment operators, leading to challenges in deep IoT integration. A camera-based solution emerged as an effective method to bypass these challenges, helping to eliminate bottlenecks, delays, and simplify integration.
-</p>
-
-<h2>Solution</h2>
-
-
-<p>
-We developed technology to intelligently recognize the fine-grained activity of heavy equipment, such as whether it's loaded/unloaded, counting the number of dumps, and distinguishing between moving and idle states. This approach offers a detailed overview of material movement, utilization, and productivity without requiring complex infrastructure. A few cameras covering the work area, necessary for security and monitoring, are used.
-
-An easy-to-use UI generates a smart video summary that highlights key activities like dump truck activity.  Heatmaps are created to show areas of high activity over a day or fixed period of time , and metrics reveal the percentage of idle time, detailed equipment activity and the spatial distribution of activity.
-</p>
-
-
-
-## Key Technology Highlights
-
-<iframe src="https://player.vimeo.com/video/935174600?h=d022a0ccfe" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/agent-symphony-architecture.png" title="Agent Symphony Architecture" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <div class="caption">
-    Recognizing dump truck activity. Notice how a second brief, noisy unload action to the right corner is also captured. 
+    Agent Symphony's multi-layered architecture orchestrating parallel AI agents through Redis-based coordination
 </div>
 
-<iframe src="https://player.vimeo.com/video/935182766?h=a607b70189" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<div class="caption">
-    Dump truck activity recognition. You can see tracking of dump trucks through occlusion ( using DNN features + Kalman filtering ). Notice how similar equipment which aren't dump trucks are correctly not detected, illustrating robustness to low false positives. 
+## Overview
+
+Agent Symphony revolutionizes AI-assisted software development by introducing a parallel multi-agent architecture. Instead of sequential code-review-fix cycles, it orchestrates specialized agents working simultaneously: a Coder Agent focuses on implementation while a Process Evaluation Agent provides real-time quality assurance.
+
+## Key Innovation
+
+The framework breaks traditional AI development bottlenecks by:
+- Running specialized agents in true parallel execution
+- Using Redis as a neural network for task coordination
+- Enforcing structured JSON communication contracts
+- Implementing continuous feedback loops without blocking
+
+## Technical Architecture
+
+### Dual-Agent System
+- **Coder Agent**: Implementation specialist producing structured JSON artifacts
+- **Process Evaluation Agent**: Quality assurance with continuous review and workflow control
+- **Redis-Based Coordination**: Task queues, global state, and session persistence
+- **Claude 3 Integration**: Leverages advanced AI capabilities with JSON enforcement
+- **Hook System**: Enables real-time human-in-the-loop interventions
+- **Robust Monitoring**: Comprehensive logging and debugging capabilities
+
+### Core Components
+
+```python
+# Example workflow initialization
+python run.py \
+    --coder-config configs/example_coder_agent_config.yaml \
+    --process-evaluation-config configs/example_process_evaluation_config.yaml \
+    --verbose
+```
+
+The system coordinates through:
+1. **Redis Task Queues**: Separate queues for each agent type
+2. **JSON Contracts**: Strict schema validation for inter-agent communication
+3. **Session Management**: Persistent conversation context
+4. **Termination Logic**: Dual-agent consensus required for completion
+
+## Results & Impact
+
+<div class="row">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        <h4>Performance Metrics</h4>
+        <ul>
+            <li><strong>60-80% faster</strong> development cycles</li>
+            <li><strong>Production-ready</strong> code quality</li>
+            <li><strong>Scalable</strong> to multiple concurrent tasks</li>
+            <li><strong>Zero downtime</strong> with Redis persistence</li>
+        </ul>
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        <h4>Technical Excellence</h4>
+        <ul>
+            <li>Python 3.8+ implementation</li>
+            <li>Redis DB 15 isolation</li>
+            <li>600s Claude timeout handling</li>
+            <li>3-retry JSON validation</li>
+        </ul>
+    </div>
 </div>
 
-<iframe src="https://player.vimeo.com/video/935178416?h=89afbf5ec2" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+## Use Cases
 
-- **Advanced Object Recognition**: We employed special techniques to recognize equipment from a distance, despite their relatively small size in video frames, by developing custom algorithms for small object detection.
-- **Challenging Environment Adaptability**: Our solution is engineered to withstand harsh construction conditions, such as dust, smoke, fog, and various lighting challenges, including low light and glare, ensuring reliable performance under all conditions.
-- **Complex Activity Recognition**: Advanced algorithms differentiate between fine-grained heavy equipment operations, such as an excavator performing excavation vs moving to/from the worksite, and dump truck operations like loading, unloading, and idling.
-- **Integration and Scalability**: Designed for seamless compatibility with existing camera infrastructure on construction sites, our solution eliminates the need for additional hardware installations and is easily scalable across multiple projects.
-- **AI-Driven Enhancements**: We leveraged synthetic data and data augmentation techniques, including Generative Adversarial Learning, to simulate construction environments and enhance system accuracy and reliability.
+### Complex Feature Development
+Coder implements while PE ensures architectural compliance, enabling faster iteration cycles with quality gates.
 
+### Test-Driven Development
+Simultaneous test and code generation with continuous validation of coverage and quality.
 
-## Model Development and Testing
+### Large-Scale Refactoring
+Safe code modifications with behavior preservation validation through parallel execution.
 
-### Data Collection
+### Documentation Generation
+Automated documentation creation with accuracy verification in real-time.
 
-Limited video data was provided by the client for training, which we supplemented with data extracted from various public sources. Our team curated and extracted web video data, facing the challenge that publicly available construction datasets were often very noisy. Many videos, shot using cell phones at close range, were shaky, necessitating extensive cleanup, careful filtering, and annotation.
+## Implementation Details
 
-### Data Annotation
+The framework employs sophisticated coordination patterns:
 
-We recruited an in-house team of annotators for this project. Developing clear guidelines for the team proved challenging, necessitating an iterative process that included an evaluation phase. During this phase, we continuously refined the guidelines. Annotators were only approved for production annotation after achieving satisfactory accuracy levels in the evaluation phase.
+```yaml
+# Agent Configuration Example
+agent_id: coder_agent
+model: claude-3-opus-20240229
+temperature: 0.1
+polling:
+  enabled: true
+  interval: 3
+  check_file: ~/.claude_token_check
+```
 
-Annotation requirements were extensive. The work encompassed various models, including equipment detection, classification, and activity recognition. The diversity of data was also critical. Data was categorized based on various sources to ensure diversity at every level. For instance, stock videos are generally cleaner, whereas YouTube videos are noisier. Longer videos were not overrepresented to avoid repetitive occurrences of similar images within the dataset.
+### Workflow Execution
+1. Task submission to Redis queue
+2. Parallel agent execution with JSON validation
+3. Continuous feedback through hook system
+4. Dual-agent termination consensus
+5. Artifact collection in workspace
 
-Various annotation tools were used, such as CVAT and Labelbox.
+## Innovation Highlights
 
-### Active Learning
+### Behavioral Patterns
+- **Proactive Feedback**: Agents request help when uncertain
+- **Iterative Refinement**: Continuous improvement loops
+- **Graceful Degradation**: Robust error handling
 
-Active learning strategies were employed to minimize annotation requirements. Models would automatically annotate samples, and only corrections made by annotators were required. This greatly improved annotation speed.
+### Architectural Decisions
+- **Redis Over Direct Communication**: Enables persistence and debugging
+- **JSON Over Free-form**: Structured data for reliability
+- **Parallel Over Sequential**: Maximizes throughput
+- **Hooks Over Hardcoded**: Flexibility for customization
 
-### Image Augmentation
+## Future Development
 
-To address the need to handle various technical challenges, including clutter, occlusion, diverse lighting & camera angles, and diversity of equipment, extensive data augmentation was performed. Additionally, synthetic data was generated using Generative Adversarial Networks (GANs), contributing to the robustness of the model.
+The framework opens pathways for:
+- Multi-agent scaling beyond two agents
+- Dynamic agent creation based on tasks
+- Learning integration from past interactions
+- Cross-project knowledge sharing
 
-### Model Development
+## Technical Stack
 
-Various algorithms, models, and frameworks were tested, including a modified Faster R-CNN approach for object detection. The original model was not well-suited for recognizing small objects, so it was tailored to this specific use case.
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Technology</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Core Language</td>
+                        <td>Python 3.8+</td>
+                        <td>Primary implementation</td>
+                    </tr>
+                    <tr>
+                        <td>Coordination</td>
+                        <td>Redis (DB 15)</td>
+                        <td>Task queues & state management</td>
+                    </tr>
+                    <tr>
+                        <td>AI Engine</td>
+                        <td>Claude 3 Opus</td>
+                        <td>Agent intelligence</td>
+                    </tr>
+                    <tr>
+                        <td>Configuration</td>
+                        <td>YAML</td>
+                        <td>Agent settings</td>
+                    </tr>
+                    <tr>
+                        <td>Monitoring</td>
+                        <td>JSONL logs</td>
+                        <td>Audit trails</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-### Activity Recognition
+## Project Resources
 
-Various algorithms for deep activity recognition were tested to accurately identify and classify different construction site activities.
+- [GitHub Repository](#) - Source code and documentation
+- [Architecture Guide](/projects/agent_symphony/ARCHITECTURE.md) - Detailed system design
+- [Usage Instructions](/projects/agent_symphony/USAGE.md) - Getting started guide
+- [Contributing Guidelines](/projects/agent_symphony/CONTRIBUTING.md) - How to contribute
 
-### Tracking
+---
 
-Kalman filtering was employed to track individual equipment through the site. Re-identification was a challenge that was overcome using Kalman filtering and visual similarity using DNN features.
-
-## Business Impact
-
-The deployment of our AI monitoring solution at client construction sites significantly improved operational efficiency and resource allocation. By offering real-time visibility into dump truck activities, our technology facilitated more effective scheduling, reduced idle times, and enabled better resource management, resulting in notable cost savings and enhanced productivity.
-
-### Project Achievements
-
-- **Enhanced Efficiency:** Improved scheduling and utilization of dump trucks, significantly reducing operational costs and enhancing project timelines.
-- **Data-Driven Decision Making:** Provided invaluable insights into dump truck operations, empowering the client with information to influence future project management strategies.
-- **Scalable and Versatile Solution:** Demonstrated the adaptability and scalability of our AI technology, highlighting its potential for broader applications within the construction industry and beyond.
-- **Metrics for Productivity:** Enabled the measurement of equipment/labor activity and correlated with progress metrics from other sources such as drone data, facilitating smart estimation and bidding.
-
-This report encapsulates our achievements in this client project, demonstrating technological innovation to solve the problem of digitizing and monitoring construction site operations. 
+*Agent Symphony demonstrates that the future of AI-assisted development lies not in monolithic solutions but in thoughtfully orchestrated multi-agent systems that multiply the effectiveness of AI capabilities.*

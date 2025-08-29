@@ -61,7 +61,9 @@
 ### Projects
 **Portfolio Entries (`_projects/`)**
 - 9 project showcase files (0_project.md through 8_project.md)
-- Featured project: Interactive Research Ideation v2.0 (0_project.md)
+- Featured projects:
+  - Interactive Research Ideation v2.0 (0_project.md)
+  - Elo Rating System for Academic Papers (1_project.md)
 - Features horizontal/vertical layouts
 - Supports categorization and importance ordering
 - Includes preview images in `assets/img/`
@@ -132,11 +134,13 @@ bundle exec jekyll serve
 - `purgecss.config.js` - CSS optimization
 
 ### Development Infrastructure (Untracked)
-- **claude-parallel.sh** - Comprehensive parallel-first development automation system
-  - Orchestrates complete software development cycles
-  - Enforces parallel execution with up to 10 concurrent tasks
-  - Integrates TDD methodology with 100% coverage targets
-  - Includes UI testing framework with Puppeteer MCP
+- **claude-parallel.sh** - Comprehensive parallel-first development automation system (44,958+ tokens)
+  - Orchestrates complete software development cycles with multiple workflow modes (SPARC, iterative, hybrid)
+  - Enforces parallel execution with up to 10 concurrent tasks using BatchTool patterns
+  - Integrates TDD methodology with 100% coverage targets (no mocks allowed)
+  - Includes aggressive UI testing framework with Puppeteer MCP integration
+  - Features: Agent SDK integration, session resumption, cross-browser/device testing
+  - Mandates: specs.md generation, architecture.md with Mermaid diagrams, risk assessment
 - **mcp.json** - Model Context Protocol configuration for 5 AI services
 - **.env** - Environment variables for service authentication
 - **projects/** - Active AI/ML project source code repository
@@ -205,9 +209,12 @@ veetil.github.io/
 - MCP servers provide external service integrations
 
 ## Current Status
-- Main branch active with recent commits
-- Featured project: Interactive Research Ideation v2.0 (recently added)
-- Untracked files: `.env`, `claude-parallel.sh`, `mcp.json`, `projects/`, `tmp/`, `todo3.md`
+- Main branch active with recent commits (last update: 616edb9)
+- Featured projects: 
+  - Interactive Research Ideation v2.0 (0_project.md)
+  - Elo Rating System for Academic Papers (1_project.md)
+- Untracked files: `.env`, `claude-parallel.sh`, `mcp.json`, `projects/`, `tmp/`
 - Active development of AI/ML projects in progress
-- Portfolio updates pending for additional projects (per todo3.md)
+- todo3.md contains instructions for migrating projects to portfolio entries
+- Recent activity: Fixed image display issues, added new featured projects
 - Full al-folio theme features available for customization
