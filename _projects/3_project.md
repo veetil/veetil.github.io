@@ -2,7 +2,7 @@
 layout: page
 title: Deep Post Claude CLI
 description: AI-powered LinkedIn content generation with scientific evaluation framework
-img: assets/img/deep-post-claude-cli.png
+img: projects/deep-post-claude-cli/deep-post-schematic.png
 importance: 4
 category: work
 ---
@@ -13,7 +13,7 @@ The Deep Post Claude CLI represents a paradigm shift in AI-powered content gener
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/deep-post-claude-cli.png" title="Deep Post Claude CLI Architecture" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="projects/deep-post-claude-cli/deep-post-schematic.png" title="Deep Post Claude CLI Architecture" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
