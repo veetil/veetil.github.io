@@ -4,7 +4,7 @@ title: Deep Post Claude CLI
 description: AI-powered LinkedIn content generation with scientific evaluation framework
 img: assets/img/deep-post-claude-cli.png
 importance: 4
-category: featured
+category: work
 ---
 
 ## Revolutionizing Professional Content Creation
