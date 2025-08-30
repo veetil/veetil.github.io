@@ -1,140 +1,191 @@
 ---
 layout: page
-title: Deep Post Claude CLI
-description: AI-powered LinkedIn content generation with scientific evaluation framework
-img: projects/deep-post-claude-cli/deep-post.png
-importance: 4
+title: Agent Symphony
+description: Multi-Agent Orchestration for AI-Powered Development - Accelerate development by 60-80% through intelligent parallel AI agent coordination
+img: assets/img/agent-symphony-architecture.png
+importance: 3
 category: work
 ---
 
-## Revolutionizing Professional Content Creation
-
-The Deep Post Claude CLI represents a paradigm shift in AI-powered content generation, introducing the industry's first comprehensive framework that combines intelligent content creation with rigorous scientific evaluation. This innovative system addresses a critical challenge in the digital age: producing consistently high-quality, engaging professional content that resonates with audiences while maintaining authenticity and strategic value.
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="projects/deep-post-claude-cli/deep-post.png" title="Deep Post Claude CLI Architecture" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/agent-symphony-architecture.png" title="Agent Symphony Architecture" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    The Deep Post Claude CLI: A sophisticated multi-tier architecture for AI-driven content excellence
+    Agent Symphony's multi-layered architecture orchestrating parallel AI agents through Redis-based coordination
 </div>
 
-## Technical Innovation at Its Core
+## Overview
 
-### The MCP Evaluation Revolution
+Agent Symphony revolutionizes AI-assisted software development by introducing a parallel multi-agent architecture. Instead of sequential code-review-fix cycles, it orchestrates specialized agents working simultaneously: a Coder Agent focuses on implementation while a Process Evaluation Agent provides real-time quality assurance.
 
-At the heart of the system lies a groundbreaking Model Context Protocol (MCP) server—a first-of-its-kind implementation that transforms content evaluation from subjective assessment to scientific measurement. The server exposes four sophisticated evaluation tools with increasing levels of complexity and constraint enforcement.
+## Key Innovation
 
-### Fourteen-Metric Excellence Framework
+The framework breaks traditional AI development bottlenecks by:
+- Running specialized agents in true parallel execution
+- Using Redis as a neural network for task coordination
+- Enforcing structured JSON communication contracts
+- Implementing continuous feedback loops without blocking
 
-The evaluation system implements 14 scientifically-designed metrics that measure every aspect of content quality:
+## Technical Architecture
 
-**Structural Excellence**
-- Word count optimization (150+ words for substance)
-- Character count precision (2500-3000 for LinkedIn optimization)
-- Structural compliance validation
+### Dual-Agent System
+- **Coder Agent**: Implementation specialist producing structured JSON artifacts
+- **Process Evaluation Agent**: Quality assurance with continuous review and workflow control
+- **Redis-Based Coordination**: Task queues, global state, and session persistence
+- **Claude 3 Integration**: Leverages advanced AI capabilities with JSON enforcement
+- **Hook System**: Enables real-time human-in-the-loop interventions
+- **Robust Monitoring**: Comprehensive logging and debugging capabilities
 
-**Engagement Science**
-- Hook effectiveness scoring (psychological impact measurement)
-- Virality potential analysis (predictive engagement modeling)
-- Comparative performance benchmarking
+### Core Components
 
-**Readability Intelligence**
-- Automated Readability Index (ARI) optimization
-- Sentence complexity balancing
-- Vocabulary sophistication tuning
+```python
+# Example workflow initialization
+python run.py \
+    --coder-config configs/example_coder_agent_config.yaml \
+    --process-evaluation-config configs/example_process_evaluation_config.yaml \
+    --verbose
+```
 
-**Content Depth**
-- Evidence density quantification
-- Rhetorical device deployment
-- Argument coherence validation
+The system coordinates through:
+1. **Redis Task Queues**: Separate queues for each agent type
+2. **JSON Contracts**: Strict schema validation for inter-agent communication
+3. **Session Management**: Persistent conversation context
+4. **Termination Logic**: Dual-agent consensus required for completion
 
-## The Power of Iterative Excellence
+## Results & Impact
 
-Unlike traditional content generation tools that produce one-off outputs, the Deep Post Claude CLI implements an iterative refinement process that continues until excellence is achieved. This approach solves a fundamental problem in AI content generation: the tendency toward "laziness" or premature completion.
+<div class="row">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        <h4>Performance Metrics</h4>
+        <ul>
+            <li><strong>60-80% faster</strong> development cycles</li>
+            <li><strong>Production-ready</strong> code quality</li>
+            <li><strong>Scalable</strong> to multiple concurrent tasks</li>
+            <li><strong>Zero downtime</strong> with Redis persistence</li>
+        </ul>
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        <h4>Technical Excellence</h4>
+        <ul>
+            <li>Python 3.8+ implementation</li>
+            <li>Redis DB 15 isolation</li>
+            <li>600s Claude timeout handling</li>
+            <li>3-retry JSON validation</li>
+        </ul>
+    </div>
+</div>
 
-### Three-Level Escalation System
+## Use Cases
 
-The framework introduces a novel escalation mechanism that ensures perfect output quality:
-1. **Professional Level**: Standard formatting and quality requests
-2. **Warning Level**: Explicit rule enforcement with detailed constraints
-3. **Critical Level**: System-level enforcement ensuring compliance
+### Complex Feature Development
+Coder implements while PE ensures architectural compliance, enabling faster iteration cycles with quality gates.
 
-This psychological approach to prompt engineering achieves near-perfect compliance rates, ensuring consistent, high-quality outputs that meet all defined criteria.
+### Test-Driven Development
+Simultaneous test and code generation with continuous validation of coverage and quality.
 
-## Real-World Impact
+### Large-Scale Refactoring
+Safe code modifications with behavior preservation validation through parallel execution.
 
-The system's effectiveness is demonstrated through impressive performance metrics:
-- **67% Outperformance Rate**: Generated content consistently outperforms curated reference posts
-- **Viral-Level Engagement**: Achieves top-tier engagement scores on complex business topics
-- **Cross-Domain Excellence**: Maintains quality across diverse subject matters
-- **Iterative Success**: Refines content through multiple cycles until perfection
+### Documentation Generation
+Automated documentation creation with accuracy verification in real-time.
 
-## Advanced Development Framework
+## Implementation Details
 
-Supporting this content engine is a sophisticated development infrastructure:
+The framework employs sophisticated coordination patterns:
 
-### Parallel-First Architecture
-- **10-way Parallel Execution**: Maximum efficiency through concurrent processing
-- **100% Test Coverage**: Rigorous quality assurance with real integration tests
-- **Continuous Validation**: Automated testing ensuring system reliability
-- **Session Management**: Sophisticated state tracking for complex workflows
+```yaml
+# Agent Configuration Example
+agent_id: coder_agent
+model: claude-3-opus-20240229
+temperature: 0.1
+polling:
+  enabled: true
+  interval: 3
+  check_file: ~/.claude_token_check
+```
 
-### Technology Stack
-- **MCP Protocol**: Industry-first implementation for content evaluation
-- **Claude CLI**: Advanced AI integration for generation and analysis
-- **Python 3.x**: Robust backend implementation
-- **TDD Methodology**: Test-driven development ensuring reliability
+### Workflow Execution
+1. Task submission to Redis queue
+2. Parallel agent execution with JSON validation
+3. Continuous feedback through hook system
+4. Dual-agent termination consensus
+5. Artifact collection in workspace
 
-## Marketing Psychology Integration
+## Innovation Highlights
 
-The system incorporates deep insights from marketing psychology and viral content analysis:
-- **Engagement Triggers**: Scientifically identified patterns that drive interaction
-- **Persuasive Frameworks**: Proven methodologies from professional copywriting
-- **Platform Optimization**: LinkedIn-specific strategies for maximum reach
-- **Psychological Precision**: Cognitive triggers and engagement patterns
+### Behavioral Patterns
+- **Proactive Feedback**: Agents request help when uncertain
+- **Iterative Refinement**: Continuous improvement loops
+- **Graceful Degradation**: Robust error handling
 
-## Key Applications
+### Architectural Decisions
+- **Redis Over Direct Communication**: Enables persistence and debugging
+- **JSON Over Free-form**: Structured data for reliability
+- **Parallel Over Sequential**: Maximizes throughput
+- **Hooks Over Hardcoded**: Flexibility for customization
 
-1. **Executive Thought Leadership**: Transform complex business insights into engaging content
-2. **Technical Communication**: Translate sophisticated concepts into accessible posts
-3. **Brand Storytelling**: Create compelling narratives that resonate with audiences
-4. **Strategic Announcements**: Craft messages that cut through the digital noise
+## Future Development
 
-## Scientific Contributions
+The framework opens pathways for:
+- Multi-agent scaling beyond two agents
+- Dynamic agent creation based on tasks
+- Learning integration from past interactions
+- Cross-project knowledge sharing
 
-This framework makes several groundbreaking contributions:
-- **First MCP-based content evaluation system in the industry**
-- **14-metric scientific approach to content quality measurement**
-- **Integrated development methodology combining TDD and parallel execution**
-- **Novel escalation engineering for LLM output control**
+## Technical Stack
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Technology</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Core Language</td>
+                        <td>Python 3.8+</td>
+                        <td>Primary implementation</td>
+                    </tr>
+                    <tr>
+                        <td>Coordination</td>
+                        <td>Redis (DB 15)</td>
+                        <td>Task queues & state management</td>
+                    </tr>
+                    <tr>
+                        <td>AI Engine</td>
+                        <td>Claude 3 Opus</td>
+                        <td>Agent intelligence</td>
+                    </tr>
+                    <tr>
+                        <td>Configuration</td>
+                        <td>YAML</td>
+                        <td>Agent settings</td>
+                    </tr>
+                    <tr>
+                        <td>Monitoring</td>
+                        <td>JSONL logs</td>
+                        <td>Audit trails</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 ## Project Resources
 
-<div class="row">
-    <div class="col-sm-6">
-        <h3>Technical Details</h3>
-        <ul>
-            <li>17+ research documents integrated</li>
-            <li>4-tier evaluation system</li>
-            <li>14 scientific metrics</li>
-            <li>3-level escalation mechanism</li>
-            <li>100% test coverage</li>
-        </ul>
-    </div>
-    <div class="col-sm-6">
-        <h3>Performance Metrics</h3>
-        <ul>
-            <li>67% outperformance rate</li>
-            <li>90% hook effectiveness</li>
-            <li>85% virality score</li>
-            <li>95% readability optimization</li>
-            <li>83% engagement rate</li>
-        </ul>
-    </div>
-</div>
+- [GitHub Repository](#) - Source code and documentation
+- [Architecture Guide](/projects/agent_symphony/ARCHITECTURE.md) - Detailed system design
+- [Usage Instructions](/projects/agent_symphony/USAGE.md) - Getting started guide
+- [Contributing Guidelines](/projects/agent_symphony/CONTRIBUTING.md) - How to contribute
 
-## Conclusion
+---
 
-The Deep Post Claude CLI stands as a testament to what's possible when cutting-edge AI technology meets rigorous engineering discipline and deep understanding of human psychology. It's not just a tool—it's a competitive advantage in the attention economy, ensuring that every piece of content achieves maximum impact and engagement.
+*Agent Symphony demonstrates that the future of AI-assisted development lies not in monolithic solutions but in thoughtfully orchestrated multi-agent systems that multiply the effectiveness of AI capabilities.*

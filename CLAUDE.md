@@ -3,11 +3,12 @@
 *Last Updated: 2025-08-30*
 
 ## Summary of Latest Updates
-- Portfolio now features **10 projects** (previously 9) with the addition of LLM Evaluation Project
-- **LinkedIn Post Evaluator MCP** - New custom MCP server implementation in deep-post-claude-cli
+- Portfolio now features **11 projects** (previously 10) with the addition of "Exploring the Potential and Challenges of Using Large Language Models for Evaluating Other LLMs" (10_project.md)
+- **LinkedIn Post Evaluator MCP** - Full custom MCP server implementation in deep-post-claude-cli with 5 evaluation tools
 - **OpenEvolve SW** has evolved into a 200+ file framework with multi-agent integration
-- Active development continues across all 5 source projects with enhanced documentation
-- Multiple todo files (todo.md through todo6.md) tracking systematic project-to-portfolio migration
+- Active development continues across all 5 source projects with enhanced documentation and architecture diagrams
+- Multiple todo files (todo.md through todo7.md) tracking systematic project-to-portfolio migration
+- 15 MCP configuration files found across various projects, indicating extensive MCP integration
 
 ## Repository Overview
 **Repository:** veetil.github.io  
@@ -50,7 +51,7 @@
 
 ### Development Tools & Integrations
 - **Automation:** claude-parallel.sh - Parallel-first development system
-- **MCP Servers:** 5+ configured services
+- **MCP Servers:** 15 MCP configuration files across projects
   - **Core Services (via mcp.json):**
     - **Puppeteer** - Browser automation and UI testing
     - **GitHub** - Repository and issue management
@@ -58,7 +59,7 @@
     - **Supabase** - Database and backend services
     - **Firecrawl** - Web scraping and data extraction
   - **Project-Specific MCPs:**
-    - **LinkedIn Post Evaluator MCP** - Custom MCP server in deep-post-claude-cli for evaluating LinkedIn post quality
+    - **LinkedIn Post Evaluator MCP** - Full custom MCP server in deep-post-claude-cli with 5 evaluation tools for LinkedIn post quality assessment
 - **AI Integration:** Claude CLI with SDK support
 - **Testing:** Comprehensive TDD with 100% coverage targets
 
@@ -72,12 +73,13 @@
 
 ### Projects
 **Portfolio Entries (`_projects/`)**
-- 10 project showcase files (0_project.md through 9_project.md)
+- 11 project showcase files (0_project.md through 10_project.md)
 - Featured projects:
   - Interactive Research Ideation v2.0 (0_project.md)
   - Elo Rating System for Academic Papers (1_project.md)
   - Agent Symphony Multi-agent Framework (2_project.md)
-  - LLM Evaluation Project (9_project.md) - Using LLMs to evaluate other LLMs
+  - Deep Post Claude CLI (3_project.md) - LinkedIn post generation with MCP evaluation
+  - LLM Evaluation Project (10_project.md) - Exploring the Potential and Challenges of Using LLMs for Evaluating Other LLMs
 - Features horizontal/vertical layouts
 - Supports categorization and importance ordering
 - Includes preview images in `assets/img/`
@@ -164,7 +166,7 @@ bundle exec jekyll serve
 - **mcp.json** - Model Context Protocol configuration for 5 AI services
 - **.env** - Environment variables for service authentication
 - **projects/** - Active AI/ML project source code repository
-- **tmp/** - Temporary files and development artifacts (todo.md, todo2.md, todo3.md, todo4.md, todo5.md, todo6.md, task.md)
+- **tmp/** - Temporary files and development artifacts (todo.md through todo7.md, task.md)
 - **broken.png** - Image file
 - **portfolio-page.png** - Portfolio page screenshot
 
@@ -219,7 +221,7 @@ veetil.github.io/
 ├── tmp/               # Temporary development files
 ├── .github/           # GitHub configuration
 │   ├── ISSUE_TEMPLATE/
-│   ├── workflows/     # GitHub Actions workflows
+│   ├── workflows/     # GitHub Actions workflows (10 total)
 │   │   ├── axe.yml                      # Accessibility testing
 │   │   ├── broken-links-site.yml        # Check site for broken links
 │   │   ├── broken-links.yml             # Check repository for broken links
@@ -252,19 +254,19 @@ Multi-agent orchestration system featuring:
 - **writeup/** - Project documentation and review
 
 ### Deep Post Claude CLI (`projects/deep-post-claude-cli/`)
-LinkedIn post generation and evaluation system with custom MCP integration:
+LinkedIn post generation and evaluation system with full custom MCP server implementation:
 - **eval/** - Post evaluation samples (post1.md through post6.md)
 - **guide/** - Writing guides for persuasive articles
 - **research/** - AI and supply chain research documents
   - AI research papers and analyses
   - Supply chain management insights
   - Technology trend documentation
-- **linkedin-post-eval-mcp/** - Custom MCP server implementation
-  - **evaluators/** - Claude-based evaluation modules
+- **linkedin-post-eval-mcp/** - Full custom MCP server implementation with 5 evaluation tools
+  - **evaluators/** - Claude-based evaluation modules for comprehensive post assessment
   - **schemas/** - Evaluation schemas for post quality metrics
-  - **tools/** - Basic metrics tools
+  - **tools/** - 5 evaluation tools: evaluate_post_basic, evaluate_post_full, evaluate_post_metrics, get_evaluation_feedback, batch_evaluate_posts
   - **utils/** - JSON parsing, validation, session management
-  - Full MCP protocol implementation for post assessment
+  - Complete MCP protocol implementation for LinkedIn post quality assessment
 
 ### Interactive Research Ideation v2.0 (`projects/interactive_reseach_ideation_v2.0/`)
 Comprehensive AI research automation platform with:
@@ -326,6 +328,7 @@ Academic paper discovery and ranking system:
 4. **Publication**: Jekyll builds and deploys to GitHub Pages
 
 ## Additional Documentation
+- **CLAUDE.md** - Repository summary for AI assistant context (last updated: 2025-08-30)
 - **CONTRIBUTING.md** - Guidelines for contributing to the project
 - **CUSTOMIZE.md** - Instructions for customizing the al-folio theme
 - **FAQ.md** - Frequently asked questions
@@ -342,25 +345,28 @@ Academic paper discovery and ranking system:
 - Docker setup available for consistent development environment
 - Performance monitoring via Lighthouse
 - Parallel development workflow via claude-parallel.sh
-- MCP servers provide external service integrations
-- GitHub Actions workflows for CI/CD (deploy, tests, prettier, lighthouse)
+- MCP servers provide external service integrations (15 MCP configurations across projects)
+- GitHub Actions workflows for CI/CD (10 workflows: deploy, tests, prettier, lighthouse, docker, accessibility)
 - Pre-commit hooks configured for code quality
 
 ## Current Status
-- Main branch active with recent commits (last update: d019a0a - "Disable ImageMagick to fix Jekyll build error")
-- Featured projects (4 total): 
+- Main branch active with recent commits (last update: 586a69d - "Update Deep Post CLI to use clean architecture diagram")
+- Portfolio now contains **11 projects** (0_project.md through 10_project.md)
+- Featured projects (5 total): 
   - Interactive Research Ideation v2.0 (0_project.md)
   - Elo Rating System for Academic Papers (1_project.md)
   - Agent Symphony Multi-agent Framework (2_project.md)
-  - LLM Evaluation Project (9_project.md)
+  - Deep Post Claude CLI (3_project.md)
+  - LLM Evaluation Project (10_project.md)
 - Untracked files: `.env`, `broken.png`, `claude-parallel.sh`, `mcp.json`, `portfolio-page.png`, `projects/`, `tmp/`
 - Active development of 5 AI/ML projects in progress
-- Multiple todo files (todo.md through todo6.md) tracking project migration to portfolio entries
+- Multiple todo files (todo.md through todo7.md) tracking project migration to portfolio entries
 - Recent activity: 
+  - Updated Deep Post CLI with clean architecture and schematic diagrams
+  - Fixed project category visibility issues
+  - Added Deep Post Claude CLI as 4th featured project
   - Fixed Jekyll build errors by disabling ImageMagick
-  - Fixed broken project grid layout and image 404 errors
-  - Improved projects page layout with 2-column design
-  - Added Agent Symphony as third featured project
-  - Expanded MCP integration with custom LinkedIn Post Evaluator
+  - Expanded MCP integration with full custom LinkedIn Post Evaluator MCP server (5 evaluation tools)
+  - 15 MCP configuration files found across various projects
   - Significant evolution of OpenEvolve SW to 200+ file framework
 - Full al-folio theme features available for customization
