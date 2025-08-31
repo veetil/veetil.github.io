@@ -1,55 +1,66 @@
 ---
 layout: page
-title: "Enhancing Large Language Model Training through Data Quality Assessment and Visualization"
-description: "This project aims to develop a  framework for assessing and improving the quality of training data used in LLM development by leveraging advanced data visualization techniques and topic modeling approaches."
-img: assets/img/topics.jpg
-importance: 10
+title: "Developing and PreTraining Large Language Models from Scratch: Scaling, Optimization, and Performance Analysis"
+description: "This project aims to implement & pretrain a custom LLMs from scratch, starting with GPT-2"
+img: assets/img/transformer.jpg
+importance: 9
 category: work
 ---
 
+
+
 ## Project Overview
-Quality of training data plays a critical role in determining the performance of the resulting models. This project aims to address the challenge of ensuring high-quality training data by focusing on data visualization and analysis techniques. The primary objective of this project is to develop a  framework for assessing and improving the quality of training data used in LLM development. By leveraging advanced data visualization techniques and topic modeling approaches, we aim to provide machine learning and deep learning engineers with the tools and insights necessary to optimize their training datasets and, consequently, enhance the performance of their LLMs.
+This project aims to design and implement large language models (LLMs) from scratch using PyTorch, starting with GPT-2. The primary objectives are to explore architectural choices (ex MoE, rotary embeddings, SwiGLU), techniques for optimizing performance and to study scaling properties.
+
+Due to the high cost of GPU resources on popular cloud platforms like Google Cloud and AWS, the training will be conducted using Lambda Labs and VAST.ai, a cost-effective alternative, on 8 NVIDIA A100 GPUs. Vast.ai is good for open-source projects that do not involve proprietary data.
+
 
 ## Research Objectives
-1. Investigate the impact of training data quality on LLM performance and identify key factors that contribute to high-quality training data.
-2. Develop a robust data visualization framework that enables engineers to quickly and effectively assess the characteristics and quality of their training datasets.
-3. Explore the application of topic modeling techniques, utilizing LLM embeddings, to identify underlying themes and subjects within training data.
-4. Investigate the role of preference data in LLM training and develop visualization techniques specifically tailored to highlight the nuances of style, tone, and appropriateness in aligned LLM responses.
-5. Create a user-friendly interface that integrates the developed data visualization and analysis tools, allowing engineers to easily explore and interpret their training data.
+1. Design and implement custom LLM models from scratch using PyTorch, focusing on exploring architectures and optimization techniques.
+2. Pretrain the model from scratch on open web data. 
+3. Analyze the relationship between model size, computational resources, and performance, contributing to the understanding of scaling laws in language models.
+4. Employ techniques such as Flash Attention and Distributed Data Parallel (DDP) for high-speed distributed training.
+5. Study impact of architectural choices, such as SwiGLU, RMSNorm, Rotary embedding, Group Query Attention. 
 
-## Updates:
-See articles listed below for updates on this project
-1. https://medium.com/@vineethveetil/optimizing-large-language-models-a-deep-dive-into-data-quality-and-visualization-3fa4e368839b
-2. https://medium.com/@vineethveetil/crafting-ai-personalities-the-art-of-evaluating-preference-data-for-llms-512cba6bcc2d 
 
 ## Methodology
-To achieve the project objectives, we will employ a multi-faceted approach that combines data visualization, topic modeling, and preference data analysis techniques. The project will be divided into several key phases:
+### Phase 1: Model Design and Implementation
+- Design the model architecture from scratch using PyTorch. Hand code  modules to enable flexibility in exploration of architectures. 
+- Start with GPT-2, following literature from OpenAI to adopt similar architectures and initialization techniques to benchmark against.
 
-### Phase 1: Literature Review and Problem Definition
-We will begin by conducting a comprehensive literature review to identify the current state-of-the-art in data quality assessment and visualization techniques for LLM training. This review will help us define the specific challenges and requirements associated with ensuring high-quality training data for LLMs.
+### Phase 2: Distributed Computing and Optimization
+- Integrate DDP into the model implementation to distribute the computational load across multiple GPUs.
+- Use Flash Attention, a novel attention mechanism, to speed up the training process and improve the model's efficiency.
+- Optimize the model's performance by fine-tuning hyperparameters and exploring techniques such as gradient accumulation and mixed-precision training.
 
-### Phase 2: Data Visualization Framework Development
-In this phase, we will develop robust data visualization frameworks that enables engineers to quickly and effectively assess the characteristics and quality of their training datasets. We will investigate the application of topic modeling techniques, using LLM embeddings, to identify underlying themes and subjects within training data. By leveraging the power of LLMs, we aim to develop more refined and accurate topic modeling approaches that can effectively sift through vast datasets and provide valuable insights into the content and structure of the data.
+### Phase 3: Data Preparation and Training
+- Collect and preprocess open web data suitable for training the GPT-2 model.
+- Set up the training environment on VAST.ai, leveraging 8 NVIDIA A100 GPUs for efficient computation.
+- Train the model on the prepared data, monitoring the validation loss over epochs to assess the model's learning progress.
 
-### Phase 3: Preference Data Visualization
-In this phase, we will focus specifically on the role of preference data in LLM training and develop visualization techniques tailored to highlight the nuances of style, tone, and appropriateness in aligned LLM responses. We will explore methods for measuring the quality of preference training data and develop tools for visualizing and analyzing this data to ensure optimal LLM performance.
-
-### Phase 4: Integration and User Interface Development
-Finally, we will integrate the developed data visualization and analysis tools into a user-friendly interface that allows engineers to easily explore and interpret their training data. The interface will provide a seamless and intuitive user experience, enabling users to quickly identify potential issues or biases in their data and make informed decisions about data curation and model optimization.
+### Phase 4: Performance Analysis, Scaling Laws and Exploring Different Architectures
+- Analyze the relationship between model size, computational resources, and performance, considering factors such as training time, memory usage, and validation loss.
+- Investigate the scaling laws governing the performance of language models, comparing the results obtained from the custom GPT-2 model with existing literature and benchmarks.
+- Explore potential avenues for further scaling the model, such as increasing the number of parameters or adopting architectural choices such as MoE, SwiGLU, RMSNorm, Rotary embedding, Group Query Attention. 
 
 ## Expected Outcomes
-The primary outcome of this project will be a framework for assessing and improving the quality of training data used in LLM development. This framework will include:
-- A data visualization toolset that enables engineers to quickly and effectively assess the characteristics and quality of their training datasets.
-- Advanced topic modeling techniques that leverage the power of LLMs to identify underlying themes and subjects within training data.
-- Specialized visualization techniques for preference data, designed to highlight the nuances of style, tone, and appropriateness in aligned LLM responses.
-- A user-friendly interface that integrates the developed data visualization and analysis tools, allowing engineers to easily explore and interpret their training data.
-
-We anticipate that the outcomes of this project will be benefecial for the development and optimization of LLMs across a wide range of applications. 
+- Fully functional custom LLMs implemented from scratch in PyTorch
+- Insights into the impact of model size on performance and computational requirements, contributing to the understanding of scaling laws.
+- A comprehensive analysis of the model's performance, including validation loss plots and comparisons with existing benchmarks.
 
 ## Future Directions
-Potential future directions include:
-- Incorporating advanced data augmentation techniques to expand and diversify training datasets, further enhancing the robustness and generalizability of LLMs.
-- Explore visualization of active learning data mapped to gaps in LLM understanding.
-- Developing automated data quality assessment tools that can continuously monitor and optimize training datasets in real-time, ensuring that LLMs remain up-to-date and effective as new data becomes available.
+- Investigate the impact of increasing the model size to 3 billion parameters and beyond on performance and computational requirements.
+- Investigate other techniques for reducing the model's computational footprint, such as knowledge distillation.
+- Collaborate with the research community to contribute to the development of more efficient and scalable language models.
 
-We hope this project will help LLM engineers with the tools and insights necessary to optimize their training data and enhance the performance of their models.
+
+By undertaking this project, we aim to deepen our understanding of LLM architectures and its scaling properties, while also contributing to the broader field of language model development. The insights gained from this project will inform future research directions and help in the development of more advanced and efficient language models.
+
+
+## References
+https://github.com/huggingface/transformers/tree/main/src/transformers/models/gpt2
+https://github.com/karpathy/nanoGPT
+
+
+
+© Copyright 2024 Vineeth Veetil. Hosted by GitHub Pages.
