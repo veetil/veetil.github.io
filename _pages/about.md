@@ -15,4 +15,4 @@ social: true # includes social icons at the bottom of the page
 
 Dynamic technology executive with extensive experience in AI strategy, specializing in Large Language Models (LLMs), Computer Vision and Generative AI. Adept at driving innovation and business development within startup environments. Proven track record of translating complex AI concepts into tangible business solutions and leading high-performance teams. Passionate about leveraging technology to solve real-world problems and improve operational efficiency
 
-https://www.linkedin.com/in/vineeth-veetil-8a08995/
+https://www.linkedin.com/in/vineeth-veetil/
